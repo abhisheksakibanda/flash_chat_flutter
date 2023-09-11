@@ -15,9 +15,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
+          children: [
             Row(
-              children: <Widget>[
+              children: [
                 Container(
                   child: Image.asset('images/logo.png'),
                   height: 60.0,

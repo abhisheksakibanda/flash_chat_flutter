@@ -12,7 +12,7 @@ class _ChatScreenState extends State<ChatScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: null,
-        actions: <Widget>[
+        actions: [
           IconButton(
               icon: Icon(Icons.close),
               onPressed: () {
@@ -26,12 +26,12 @@ class _ChatScreenState extends State<ChatScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
+          children: [
             Container(
               decoration: kMessageContainerDecoration,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
+                children: [
                   Expanded(
                     child: TextField(
                       onChanged: (value) {
