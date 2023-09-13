@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "330782042259",
+    "project_id": "flash-chat-a4352",
+    "storage_bucket": "flash-chat-a4352.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330782042259:android:6576f957242923ffa14566",
+        "android_client_info": {
+          "package_name": "com.abhisheksakibada.flash_chat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJJwdsEWcUSIlMCMy5SqkcGR5f1l9FSB0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
