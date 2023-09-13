@@ -40,11 +40,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Hero(
-                tag: 'logo',
-                child: Container(
-                  height: 200.0,
-                  child: Image.asset('images/logo.png'),
+              Flexible(
+                child: Hero(
+                  tag: 'logo',
+                  child: Container(
+                    height: 200.0,
+                    child: Image.asset('images/logo.png'),
+                  ),
                 ),
               ),
               SizedBox(
@@ -84,8 +86,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     showSpinner = true;
                   });
                   try {
-                    final UserCredential newUser =
-                        await _auth.createUserWithEmailAndPassword(
+                    await _auth.createUserWithEmailAndPassword(
                       email: email,
                       password: password,
                     );
@@ -94,7 +95,21 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     });
                     Navigator.popAndPushNamed(context, ChatScreen.id);
                   } catch (e) {
-                    print(e);
+                    showAdaptiveDialog(
+                      context: context,
+                      builder: (context) => AlertDialog(
+                        content: Text(e.toString().split('] ')[1].trim()),
+                        actions: [
+                          TextButton(
+                            onPressed: () => Navigator.pop(context),
+                            child: Text('OK'),
+                          )
+                        ],
+                      ),
+                    );
+                    setState(() {
+                      showSpinner = false;
+                    });
                   }
                 },
               ),
